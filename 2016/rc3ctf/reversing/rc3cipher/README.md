@@ -11,6 +11,7 @@ for GNU/Linux 2.6.24, BuildID[sha1]=2be167e9bcde8cfa3e906c83a0f9fe866c7ca8f7, no
 If we start it without arguments we'll be welcomed with a nice memory error.
 
 When looking quickly at the entrypoint of the program we see clear references to argv[1].
+
 So we'll try some input:
 
 ```
