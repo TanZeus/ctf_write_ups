@@ -35,7 +35,7 @@ We have to find somewhere the flag, so let's take a look at the strings in the a
 
 
 
-1b65380f084b59016875513c6373131d2a6a327172753a2918243d7b181a051e5f1e104c32331c0842777b375f100113 looks like our flag.
+"1b65380f084b59016875513c6373131d2a6a327172753a2918243d7b181a051e5f1e104c32331c0842777b375f100113" looks like our flag.
 So we have to reverse the binary, to write a decryption subroutine by analyzing the encryption routine.
 
 
