@@ -1,8 +1,7 @@
 # RC3 CTF 2016 - RC3Cipher (Reversing 350) WriteUp
 
-In this task we get a binary "rc3_cipher" which we have to break it's encryption/decryption cycle.
+In this task we get a binary "rc3_cipher" which we have to break it's encryption cycle.
 
-We only get the file: rc3_cipher
 ```
 rc3_cipher: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
 dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
@@ -38,7 +37,6 @@ We have to find somewhere the flag, so let's take a look at the strings in the a
 
 1b65380f084b59016875513c6373131d2a6a327172753a2918243d7b181a051e5f1e104c32331c0842777b375f100113 looks like our flag.
 So we have to reverse the binary, to write a decryption subroutine by analyzing the encryption routine.
-
 
 
 So we generate some pseudocode and look closely at the application entrypoint:
