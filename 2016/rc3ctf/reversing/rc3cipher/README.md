@@ -390,6 +390,7 @@ Xores argv1[argv1_chr_index] with smaller_chars[(smaller_chars[v6] + smaller_cha
 
 So I wrote a python script which implements the whole cycle to bruteforce biggest_char and to decrypt the encryted flag with it: [solve.py](https://github.com/swisscyberstorm/cft_write_ups/blob/master/2016/rc3ctf/reversing/rc3cipher/solve.py)
 
+FLAG = # RC3-2016-Y0UR-KSA-IS-BAD-@ND-Y0U-SH0ULD-F33L-BAD
 
 ## Conclusion
 
