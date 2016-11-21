@@ -164,7 +164,7 @@ So what the application does:
 4. black magic
 5. convert to hex
 6. compare with encrypted flag
-7. goodboy || badboy
+7. goodboy / badboy
 
 
 So let's dive into those black magic functions, to see whats happening in there:
@@ -228,8 +228,8 @@ curr_smaller_char = '`' (0x60)
 so:
 
 ```
-smaller_chars[0x61 - 0x60 - 1] = \` (0x60)
-smaller_chars[0] = \` (0x60)
+smaller_chars[0x61 - 0x60 - 1] = ` (0x60)
+smaller_chars[0] = ` (0x60)
 ```
 
 next step:
@@ -378,9 +378,7 @@ v4 = *(_BYTE *)(v6 + smaller_chars);
 Again switches chars.
 
 ```c
-*(_BYTE *)(argv1_chr_index + argv1) ^= *(_BYTE *)((*(_BYTE *)(v6 + smaller_chars) + *(_BYTE *)(v7 + smaller_chars))
-                                                % biggest_character
-                                                + smaller_chars);
+*(_BYTE *)(argv1_chr_index + argv1) ^= *(_BYTE *)((*(_BYTE *)(v6 + smaller_chars) + *(_BYTE *)(v7 + smaller_chars)) % biggest_character + smaller_chars);
 ```
 
 Xores argv1[argv1_chr_index] with smaller_chars[(smaller_chars[v6] + smaller_chars[v7]) % biggest_character].
