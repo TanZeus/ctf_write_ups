@@ -88,8 +88,9 @@ __int64 __fastcall get_biggest_char(const char *argv1)
 Sets a char (biggest_char) to -1 and loops trough each character of argv1, if this argv character is bigger than
 the biggest_char character, biggest_char will take it's value.
 
-```c
 Back into the main function we see a small loop:
+
+```c
 
 for ( curr_index = 0; (signed int)curr_index < (signed int)argv_strlen; ++curr_index )// first xor input with "rc3cipherbestcipher"
 {
